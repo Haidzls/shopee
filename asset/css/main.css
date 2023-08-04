@@ -22,6 +22,7 @@
     font-weight: 100;
     padding: 0 8px;
     position: relative;
+    text-decoration: none;
 }
 
 .header__nav i{
@@ -88,7 +89,101 @@
     width: 40%;
     padding: 0 10px;
 }
+/* notify header */
+.notify{
+    border: 1px solid #eee;
+    display: none;
+    width: 400px;
+    position:absolute;
+    background-color: #fff;
+    right: 8px;
+    top: 180%;
+    color: #333;
+    animation: notifyAnimation ease-in 0.2s;
+    transform-origin: calc(100% - 20px) top;
+}
 
-.abc{
-    display:inline-block;
+.notify--hover:hover .notify{
+    display: block;
+}
+
+@keyframes notifyAnimation{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.notify::before{
+    content: "";
+    display: inline-block;
+    width: 82px;
+    height: 20px;
+    position: absolute;
+    top: -17px;
+    right: -2px;
+}
+
+.notify::after{
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -32px;
+    right: 12px;
+}
+
+.notify__header{
+    margin-left: 16px;
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.notify__body{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(246, 65, 45, 0.1);
+}
+
+.notify__body-img{
+    object-fit:contain;
+    width: 48px;
+    margin: 12px;
+}
+
+.notify__body-content{
+    margin-top: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.notify__body-content h3{
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.notify__body-content p{
+    margin-top: 4px;
+    color: #333;
+    opacity: 0.6;
+}
+.notify__end{
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+}
+.notify__end:hover,
+.notify__body:hover{
+    background-color: #f7f7f7;
+    cursor: pointer;
 }
