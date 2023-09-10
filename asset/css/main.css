@@ -86,7 +86,6 @@
     top: 28px;
     right: 0px;
     box-shadow: 0 0 5px #ccc;
-
 }
 
 .user-info::after{
@@ -427,6 +426,7 @@
 .header__search__logo{
     display: inline-flex;
     margin: auto;
+    padding-right: 35px;
     color: #fff;
     font-size: 30px;
     flex: 1;
@@ -727,4 +727,69 @@
 .cart-section__button a{
     color: #fff;
     text-decoration: none;
+}
+
+/* app_container */
+
+.container{
+    background-color: #f5f5f5;
+}
+
+.category{
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: 5px;
+    width: max-content;
+    padding-right: 30px;
+}
+
+.category-heading{
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 16px;
+}
+
+.category-heading__icon{
+
+}
+
+.category-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.category-list li{
+    padding: 5px 5px 5px 20px;
+    position: relative;
+}
+
+.category-list li .category-item__link{
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    right: 0;
+    transition: right linear 0.2s;
+}
+
+.category-item--active .category-item__link::before{
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 4px solid ;
+    border-color: transparent transparent transparent #fe6433;
+}
+
+.category-item--active a{
+    color:#f53f2d !important;
+}
+
+.category-list li .category-item__link:hover{
+    color: #f53f2d;
+    right: -4px;
 }
