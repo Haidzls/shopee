@@ -1084,3 +1084,36 @@
     font-weight: 700;
     color: #fff;
 }
+
+/* pagination */
+
+.pagination{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 48px 0;
+    text-align: center;
+}
+
+.pagination-item{
+    display: inline-block;
+    margin: 0 10px 0;
+}
+
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    color: #878383;
+    min-width: 40px;
+    height: 30px;
+    line-height: 30px;  
+}
+
+.pagination-item--current:hover{
+    background-color: #f3755b;
+}
+
+.pagination-item--current{
+    background-color: #ed5c3f;
+    color: #fff;
+}
